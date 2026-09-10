@@ -27,7 +27,6 @@ SpaceCast benchmarks two modern Time-Series Foundation Models — **Chronos-2** 
 - [Getting Started](#getting-started)
 - [Data](#data)
 - [Notebooks](#notebooks)
-- [Testing](#testing)
 - [Limitations & Future Work](#limitations--future-work)
 - [References](#references)
 
@@ -158,10 +157,6 @@ SpaceCast/
 │       └── visualization/
 │           └── plots.py
 │
-├── tests/
-│   ├── test_data.py
-│   ├── test_models.py
-│   └── test_metrics.py
 │
 ├── pyproject.toml
 └── README.md
