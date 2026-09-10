@@ -1,0 +1,1 @@
+"""Simple baseline forecasting models."""

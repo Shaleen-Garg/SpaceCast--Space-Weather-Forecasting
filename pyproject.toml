@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spacecast"
+version = "0.1.0"
+description = "Time-series forecasting for space weather using Foundation Models."
+authors = [{name = "SpaceCast Team"}]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "statsmodels",
+    "torch",
+    "transformers",
+    "huggingface_hub",
+    "jupyter",
+    "tqdm",
+    "chronos-forecasting",
+    # TimesFM-3 is installed from source (not on PyPI).
+    # See: https://github.com/google-research/timesfm
+    # Clone the repo and run: pip install -e timesfm/
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "isort",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
