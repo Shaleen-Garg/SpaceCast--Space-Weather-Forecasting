@@ -1,16 +1,16 @@
-[README (2).md](https://github.com/user-attachments/files/32047964/README.2.md)
 # 🌌 SpaceCast
 
 **Geomagnetic space-weather forecasting with pretrained Time-Series Foundation Models**
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
-![Chronos--2](https://img.shields.io/badge/Chronos--2-Amazon-232F3E?style=flat)
-![TimesFM--3](https://img.shields.io/badge/TimesFM--3-Google-4285F4?style=flat&logo=google&logoColor=white)
-![Data](https://img.shields.io/badge/Data-NASA%20OMNI2-DA291C?style=flat&logo=nasa&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
+[![GitHub](https://img.shields.io/badge/GitHub-SpaceCast-181717?style=flat&logo=github&logoColor=white)](https://github.com/Shaleen-Garg/SpaceCast--Space-Weather-Forecasting)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Chronos-2](https://img.shields.io/badge/Chronos--2-Amazon-232F3E?style=flat)](https://github.com/amazon-science/chronos-forecasting)
+[![TimesFM-3](https://img.shields.io/badge/TimesFM--3-Google-4285F4?style=flat&logo=google&logoColor=white)](https://github.com/google-research/timesfm)
+[![Data](https://img.shields.io/badge/Data-NASA%20OMNI2-DA291C?style=flat&logo=nasa&logoColor=white)](https://omniweb.gsfc.nasa.gov/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
 
-SpaceCast benchmarks two modern Time-Series Foundation Models — **Chronos-2** (Amazon) and **TimesFM-3** (Google) — against classical statistical baselines on the task of forecasting the **Dst geomagnetic index**, using 9+ years of real NASA OMNI2 solar-wind and geomagnetic data. It evaluates every model zero-shot, at five forecast horizons, under both normal and storm-time conditions, including a case study of the **May 2024 G5 storm** — the most intense geomagnetic event in two decades.
+SpaceCast benchmarks two modern Time-Series Foundation Models — **Chronos-2** (Amazon) and **TimesFM-3** (Google) — against classical statistical baselines on the task of forecasting the **Dst geomagnetic index**, using 10 years of real NASA OMNI2 solar-wind and geomagnetic data.
 
 > Solar-wind / geomagnetic observations → Time-Series Foundation Model → forecast → rigorous evaluation → visualization
 
@@ -124,28 +124,47 @@ The notebooks are intentionally split by responsibility: **04** generates foreca
 
 ```
 SpaceCast/
+│
 ├── data/
-│   ├── raw/                 # OMNI2 raw downloads (gitignored — see Data section)
-│   ├── interim/              # Intermediate cleaning outputs (gitignored)
-│   └── processed/            # Final cleaned dataset (gitignored)
+│   ├── raw/                 # OMNI2 raw downloads (gitignored)
+│   ├── interim/             # Intermediate processing files (gitignored)
+│   └── processed/           # Final cleaned dataset (gitignored)
+│
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
 │   ├── 02_space_weather_analysis.ipynb
 │   ├── 03_baseline_models.ipynb
-│   ├── 04_chronos_forecasting.ipynb   # Forecast generation (all models)
-│   ├── 05_evaluation.ipynb            # Numerical evaluation & interpretation
-│   └── 06_visualization.ipynb         # Publication-quality figures
+│   ├── 04_chronos_forecasting.ipynb
+│   ├── 05_evaluation.ipynb
+│   └── 06_visualization.ipynb
+│
 ├── reports/
-│   ├── figures/               # 11 generated figures (PNG)
-│   └── results/                # Saved metric CSVs
-├── src/spacecast/
-│   ├── config.py              # Target variables, horizon, seed
-│   ├── data/                   # Download, cleaning, preprocessing
-│   ├── models/                 # Baselines, TSFM wrappers
-│   ├── evaluation/              # Metrics, backtesting
-│   └── visualization/           # Plotting utilities
-├── tests/                     # Unit tests (pytest)
-└── pyproject.toml
+│   ├── figures/             # Generated figures
+│   └── results/             # Saved evaluation metrics
+│
+├── src/
+│   └── spacecast/
+│       ├── config.py
+│       ├── data/
+│       │   ├── download.py
+│       │   ├── cleaning.py
+│       │   └── preprocessing.py
+│       ├── models/
+│       │   ├── baselines.py
+│       │   └── tsfm.py
+│       ├── evaluation/
+│       │   ├── metrics.py
+│       │   └── backtesting.py
+│       └── visualization/
+│           └── plots.py
+│
+├── tests/
+│   ├── test_data.py
+│   ├── test_models.py
+│   └── test_metrics.py
+│
+├── pyproject.toml
+└── README.md
 ```
 
 ---
