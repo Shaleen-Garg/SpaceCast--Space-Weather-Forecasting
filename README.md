@@ -134,7 +134,7 @@ SpaceCast/
 │   ├── 01_data_exploration.ipynb
 │   ├── 02_space_weather_analysis.ipynb
 │   ├── 03_baseline_models.ipynb
-│   ├── 04_chronos_forecasting.ipynb
+│   ├── 04_chronos_TimesFM_forecasting.ipynb
 │   ├── 05_evaluation.ipynb
 │   └── 06_visualization.ipynb
 │
