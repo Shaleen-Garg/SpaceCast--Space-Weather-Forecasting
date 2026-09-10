@@ -1,5 +1,5 @@
-[README (1).md](https://github.com/user-attachments/files/32047874/README.1.md)
-# SpaceCast
+[README (2).md](https://github.com/user-attachments/files/32047964/README.2.md)
+# 🌌 SpaceCast
 
 **Geomagnetic space-weather forecasting with pretrained Time-Series Foundation Models**
 
@@ -128,10 +128,6 @@ SpaceCast/
 │   ├── raw/                 # OMNI2 raw downloads (gitignored — see Data section)
 │   ├── interim/              # Intermediate cleaning outputs (gitignored)
 │   └── processed/            # Final cleaned dataset (gitignored)
-├── docs/
-│   ├── project_overview.md
-│   ├── methodology.md
-│   └── physics_background.md
 ├── notebooks/
 │   ├── 01_data_exploration.ipynb
 │   ├── 02_space_weather_analysis.ipynb
