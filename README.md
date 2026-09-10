@@ -1,7 +1,14 @@
-[README.md](https://github.com/user-attachments/files/32047775/README.md)
+[README (1).md](https://github.com/user-attachments/files/32047874/README.1.md)
 # SpaceCast
 
 **Geomagnetic space-weather forecasting with pretrained Time-Series Foundation Models**
+
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![Chronos--2](https://img.shields.io/badge/Chronos--2-Amazon-232F3E?style=flat)
+![TimesFM--3](https://img.shields.io/badge/TimesFM--3-Google-4285F4?style=flat&logo=google&logoColor=white)
+![Data](https://img.shields.io/badge/Data-NASA%20OMNI2-DA291C?style=flat&logo=nasa&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 
 SpaceCast benchmarks two modern Time-Series Foundation Models — **Chronos-2** (Amazon) and **TimesFM-3** (Google) — against classical statistical baselines on the task of forecasting the **Dst geomagnetic index**, using 9+ years of real NASA OMNI2 solar-wind and geomagnetic data. It evaluates every model zero-shot, at five forecast horizons, under both normal and storm-time conditions, including a case study of the **May 2024 G5 storm** — the most intense geomagnetic event in two decades.
 
